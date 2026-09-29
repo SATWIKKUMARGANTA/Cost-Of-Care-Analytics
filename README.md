@@ -81,3 +81,29 @@ GROUP BY month_year ORDER BY month_year;
 SELECT provider_name, SUM(total_cost) as cost 
 FROM target.cost_by_provider 
 GROUP BY provider_name ORDER BY cost DESC LIMIT 10;
+
+### Dashboard Screenshots
+
+Cost of Care Overview:
+
+![Cost Overview](./dashboards/cost_overview.png)
+
+High-Cost Members:
+
+![High Cost Members](./dashboards/high_cost_members.png)
+
+How to Run
+
+1. Upload raw cost/claims file to S3 Source Bucket
+
+2. Lambda pre-processing validates -> pushes to SQS Queue-1
+
+3. Lambda processing does core business logic -> writes to Target & Auditing DB
+
+4. Message pushed to SQS Queue-2 -> Lambda post-processing
+
+5. On success -> File moved to S3 Archive, SNS notification sent
+
+6. On failure -> File moved to S3 Failure bucket
+
+7. Connect QuickSight to Aurora -> Visualize Dashboards
