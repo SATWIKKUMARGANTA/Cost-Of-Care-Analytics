@@ -88,8 +88,8 @@ GROUP BY provider_name ORDER BY cost DESC LIMIT 10;
 ![Cost Overview](./DashBoards/Customers_Overview.png)
 
 **High-Cost Members:
-![High Cost Members](./dashboards/high_cost_members.png)
-How to Run
+![High Cost Members](./DashBoards/Peoples_Overview.png)
+## How to Run
 1. Upload raw cost/claims file to S3 Source Bucket
 2. Lambda pre-processing validates -> pushes to SQS Queue-1
 3. Lambda processing does core business logic -> writes to Target & Auditing DB
