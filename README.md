@@ -1,4 +1,4 @@
-# Cost-Of-Core-Analytics
+# Cost-Of-Care-Analytics
 
 A Serverless Healthcare Data Engineering Project using Event-Driven Pipeline with AWS (S3, Lambda, SQS, Aurora, SNS, QuickSight).
 
