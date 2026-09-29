@@ -3,7 +3,7 @@
 A Serverless Healthcare Data Engineering Project using Event-Driven Pipeline with AWS (S3, Lambda, SQS, Aurora, SNS, QuickSight).
 
 ## 📌 Architecture Diagram
-![Architecture Diagram](https://github.com/YOUR_USERNAME/cost-of-care-analytics/blob/main/Architecture_Diagram.jpeg)
+![Architecture Diagram](https://github.com/SATWIKKUMARGANTA/Cost-Of-Care-Analytics/blob/main/Architecture/Architecture.jpeg)
 
 ## 🏗️ Architecture Flow
 1.  **Ingestion & Validation Layer:** S3 Source Bucket (Raw Claims/Cost Files) -> Lambda Pre-processing (1. File validations)
